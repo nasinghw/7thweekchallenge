@@ -1,6 +1,6 @@
   $(document).ready(function () {
     // Display the current date
-    
+
     $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY [at] hh:mm:ss a"));
   
     // Calendar timeblocks to display
@@ -15,10 +15,13 @@
       // Add hour-dependent classes (past, present, future)
 
       if (hour < dayjs().hour()) {
+         //Style class at past hour
         timeblock.addClass("past");
       } else if (hour === dayjs().hour()) {
+        //Style class at current hour
         timeblock.addClass("present");
       } else {
+         //Style class at future hour
         timeblock.addClass("future");
       }
   
