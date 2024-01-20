@@ -1,7 +1,13 @@
   $(document).ready(function () {
-    // Display the current date
+    // Display the current date in a format 
 
     $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY [at] hh:mm:ss a"));
+
+    setInterval(function () {
+        //Keep the current time ticking on the page
+        
+        $("#currentDay").text(dayjs().format("dddd, MMMM D, YYYY [at] hh:mm:ss a"));
+      }, 1000);
   
     // Calendar timeblocks to display
 
